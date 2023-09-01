@@ -1,0 +1,77 @@
+<html>
+
+</html>
+<head>
+    <h1>
+        <center>Loan Approval Prediction</center>
+    </h1>
+</head>
+<body>
+<form action="/predict" method="post">  
+    <table>
+        <tr>
+            <td><h3>Gender</h3></td>
+            <td><select name="Gender" required="required">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </td>
+        </tr>
+        <tr>
+            <td><h3>Married</h3></td>
+            <td><select name="Married" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </td>
+        </tr>
+        <tr>
+            <td><h3>Dependents</h3></td>
+            <td><input type="float" name="Dependents" required="required"></td>
+        </tr>
+        <tr>
+            <td><h3>Education</h3></td>
+            <td><select name="Education" required="required">
+                <option value="Graduate">Graduate</option>
+                <option value="Not Graduate">Not Graduate</option>
+            </td>
+        </tr>
+        <tr>
+            <td><h3>Self Employed</h3></td>
+            <td><select name="Self_Employed" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </td>
+        </tr>
+        <tr>
+            <td><h3>Applicant Income</h3></td>
+            <td><input type="number" name="ApplicantIncome" required="required"></td>
+        </tr>
+        <tr>
+            <td><h3>Coapplicant Income</h3></td>
+            <td><input type="float" name="CoapplicantIncome" required="required"></td>
+        </tr>
+        <tr>
+            <td><h3>Loan Amount</h3></td>
+            <td><input type="float" name="LoanAmount" required="required"></td>
+        </tr>
+        <tr>
+            <td><h3>Loan Amount Term</h3></td>
+            <td><input type="float" name="Loan_Amount_Term" required="required"></td>
+        </tr>
+        <tr>
+            <td><h3>Credit History (0 for no and 1 for yes)</h3></td>
+            <td><input type="number" name="Credit_History" required="required"></td>
+        </tr>
+        <tr>
+            <td><h3>Property Area</h3></td>
+            <td><select name="Property_Area" required="required">
+                <option value="Rural">Rural</option>
+                <option value="Urban">Urban</option>
+                <option value="Semiurban">Semiurban</option>
+            </td>
+        </tr>
+    </table>
+<br><br>
+<button type="submit">Loan Status</button>
+</form>
+<br><br><h3>{{Prediction_text}}</h3>
+</body>
